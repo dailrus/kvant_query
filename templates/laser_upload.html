@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="d-grid gap-3 col-6 mx-auto">
+{% for msg in get_flashed_messages()%}
+    <div class="alert alert-primary">{{msg}}</div>
+{% endfor %}
+    
+<form method=post enctype=multipart/form-data>
+       
+    <div class="mb-3">
+        <label for="file" class="form-label">Выберите деталь</label>
+        <input class="form-control" type="file" id="file" name="file">
+    </div>
+<label for="params-set" class="form-label">Укажите параметры</label>    
+<div class="input-group mb-3" id="params-set">
+    <select class="form-select selectpicker" id="material" name="material">
+    <option selected>Материал</option>
+    <option value="1">Фанера</option>
+    <option value="2">Оргстекло</option>
+    <option value="3">Пластик</option>
+    </select>
+    <input class='input-group-text' type=number name="thickness" id="thickness" placeholder="Толщина материала">
+    <span class="input-group-text" id="mm-addon">мм</span>
+    <input class='input-group-text' type=number name="pieces" id="pieces" placeholder="Количество">
+    <span class="input-group-text" id="pc-addon">шт.</span>
+</div>
+  <button type="submit" class="mb-3 btn btn-lg btn-primary">Отправить</button>
+</form>
+</div>
+{% endblock %}
+

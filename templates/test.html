@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-sm">
+<form  method="POST">
+    <div class="form-group">
+        <label for="machine-select">Выбор оборудования</label>
+        <select class="form-select selectpicker" id="machine-select" name="machine-select">
+          <option value="3d">3D принтер</option>
+          <option value="laser">Лазерный станок</option>
+        </select>
+        <button type="submit">ок</button>
+      </div>
+</form>
+</div>
+{% endblock %}

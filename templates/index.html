@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="mb-5"><font size="7"><center>Очередь в Hi-Tech</center></font></div>
+<div class="mb-3"><font size="5"><center>Заказов в очереди: {{ query_len }}</center></font></div>
+<div class="d-grid gap-3 col-5 mx-auto">
+    <a class="btn btn-primary btn-lg" href="/print_upload">3D Печать</a>
+    <a class="btn btn-primary btn-lg" href="/laser_upload">Резка на лазере</a>
+</div>
+</center>
+{% endblock %}

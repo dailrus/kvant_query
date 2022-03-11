@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="d-grid gap-3 col-6 mx-auto">
+<form method=post enctype=multipart/form-data>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Выберите деталь</label>
+        <input class="form-control" type="file" id="formFile">
+    </div>
+<label for="params-set" class="form-label">Укажите параметры</label>    
+<div class="input-group mb-3" id="params-set">
+    <select class="form-select" id="inputGroupSelect02">
+    <option selected>Тип пластика</option>
+    <option value="1">PLA</option>
+    <option value="2">PETG</option>
+    <option value="3">ABS</option>
+    <option value="4">TPU</option>
+    </select>
+    <input class='input-group-text' type=number name="Толщина" min="0" step="0.1" id="thickness" placeholder="Высота слоя">
+    <span class="input-group-text" id="mm-addon">мм</span>
+    <input class='input-group-text' type=number name="pieces" id="pieces" placeholder="Количество">
+    <span class="input-group-text" id="pc-addon">шт.</span>
+</div>
+  <input type="submit" class="mb-3 btn btn-lg btn-primary" value="Отправить заказ">
+
+</form>
+</div>
+{% endblock %}
+

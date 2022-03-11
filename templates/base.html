@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Hi-Tech заказы</span>
+        </a>
+  
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a></li>
+          <li class="nav-item"><a href="/laser_upload" class="nav-link">Резка на лазерном станке</a></li>
+          <li class="nav-item"><a href="/print_upload" class="nav-link">3D Печать</a></li>
+          <li class="nav-item"><a href="/test" class="nav-link">Тесты</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Донат</a></li>
+        </ul>
+      </header>
+    {% block body %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.js"></script>
+</body>
+</html>
